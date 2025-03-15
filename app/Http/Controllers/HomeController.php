@@ -25,7 +25,7 @@ class HomeController extends Controller
         $Slider = Slider::orderBy('rank')->get();
         $Index = Page::where('id', 3)->first();
 
-        SEOMeta::setDescription('Urban Reklam, tabela sektöründe en yeni teknolojileri ve yaratıcı tasarımları kullanarak, işletmenizin en iyi şekilde görünmesini sağlıyoruz.');
+        SEOMeta::setDescription("The Woof Dog Resort İzmir Foça'da köpek oteli, köpek kreşi ve başlangıç ve ileri seviye köpek eğitimleri veren bir firmadır.");
         SEOMeta::setCanonical(url()->full());
         
         $Hakkimizda = Page::where('id', '=',1)->first();
@@ -101,7 +101,7 @@ class HomeController extends Controller
 
     public function servicedetail($url)
     {
-        $Detay = Service::whereHas('translations', function ($query) use ($url) {
+        $Detail = Service::whereHas('translations', function ($query) use ($url) {
             $query->where('slug', $url);
         })->first();
 
@@ -111,8 +111,8 @@ class HomeController extends Controller
             ->whereHasMorph(
                 'model',
                 [Service::class],
-                function ($query) use ($Detay) {
-                    $query->where('id', $Detay->id);
+                function ($query) use ($Detail) {
+                    $query->where('id', $Detail->id);
                 }
             )
             ->whereJsonContains('custom_properties->orientation', 'horizontal')
@@ -125,17 +125,17 @@ class HomeController extends Controller
             ->whereHasMorph(
                 'model',
                 [Service::class],
-                function ($query) use ($Detay) {
-                    $query->where('id', $Detay->id);
+                function ($query) use ($Detail) {
+                    $query->where('id', $Detail->id);
                 }
             )
             ->get();
 
-        views($Detay)->cooldown(60)->record();
-        SEOMeta::setTitle($Detay->title);
+        views($Detail)->cooldown(60)->record();
+        SEOMeta::setTitle($Detail->title);
         SEOMeta::setCanonical(url()->full());
         
-        return view('frontend.service.detail', compact('Detay', 'horizontalImages', 'allImages'));
+        return view('frontend.service.detail', compact('Detail', 'horizontalImages', 'allImages'));
     }
 
 
@@ -156,32 +156,8 @@ class HomeController extends Controller
         return view('frontend.project.index',compact('Project'));
     }
 
-    public function productdetail($url)
-    {
-        $Detay = Product::whereHas('translations', function ($query) use ($url) {
-            $query->where('slug', $url);
-        })->first();
 
-        views($Detay)->cooldown(60)->record();
-
-
-        SEOMeta::setTitle($Detay->title);
-        SEOMeta::setCanonical(url()->full());
-        return view('frontend.product.index', compact('Detay'));
-    }
-
-    public function partdetail($url)
-    {
-        $Detay = Product::whereHas('translations', function ($query) use ($url) {
-            $query->where('slug', $url);
-        })->first();
-
-        views($Detay)->cooldown(60)->record();
-        SEOMeta::setTitle($Detay->title);
-        SEOMeta::setCanonical(url()->full());
-        return view('frontend.product.index', compact('Detay'));
-    }
-
+  
     public function gallery(){
 
         return view('frontend.gallery.index');

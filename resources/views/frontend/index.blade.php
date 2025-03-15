@@ -4,13 +4,64 @@
 
     @include('frontend.layout.slider')
 
+    <div class="container">
+        <div class="row align-items-center py-1">
+            <div class="col-md-6 mb-4">
+                <div class="pe-3 pe-md-5 pb-3 pb-sm-0 py-lg-5 my-lg-4 border-right-light border-sm-none">
+                    {!! $Hakkimizda->desc !!}
+                </div>
+            </div>
+            <div class="col-sm-6 ps-5">
+                <div class="cascading-images-wrapper bg-color-grey border-radius-2 p-5 w-100 text-center">
+                    <div class="cascading-images transform-none position-relative clearfix">
+                        <div class="position-absolute z-index-3" style="top: -5%;left:-5%">
+                            <div data-plugin-float-element="" data-plugin-options="{'startPos': 'bottom', 'speed': 0.1, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}" style="bottom: 0px; transition: transform 1000ms ease-out 0ms; transform: translate3d(0px, -5.24825%, 0px);">
+                                <img src="/{{config('settings.siteLogo')}}" style="max-width: 200px; animation-duration: 600ms; animation-delay: 300ms;" class="bg-white appear-animation border-radius-2 box-shadow-3 animated expandIn appear-animation-visible" width="500" alt="{{ config('settings.siteName') }}" data-appear-animation="expandIn" data-appear-animation-delay="300" data-appear-animation-duration="600ms">
+                            </div>
+                        </div>
+
+                        <div class="position-relative z-index-2">
+                            <img src="https://picsum.photos/800/800?random=1" class="p-1 appear-animation border-radius-2 box-shadow-3 animated expandIn appear-animation-visible" width="500" alt="{{ config('settings.siteName') }}" data-appear-animation="expandIn" data-appear-animation-duration="600ms" style="animation-duration: 600ms; animation-delay: 100ms;">
+                        </div>
+
+                        <div class="patterns opacity-7 position-absolute z-index-1 d-none d-md-block" style="bottom: -8%; right: 9%;">
+                            <div data-plugin-float-element="" data-plugin-options="{'startPos': 'top', 'speed': 0.1, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}" style="width: 310px; height: 170px; top: 0px; transition: transform 1000ms ease-out 0ms; transform: translate3d(0px, 11.7092%, 0px);">
+                                <svg width="100%" height="100%">
+                                    <defs>
+                                        <pattern id="dots" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse">
+                                            <circle fill="#0088cc" cx="1.5" cy="1.5" r="1.5"></circle>
+                                        </pattern>
+                                    </defs>
+                                    <rect x="0" y="0" width="100%" height="100%" fill="url(#dots)"></rect>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="patterns opacity-7 position-absolute z-index-1 d-none d-md-block" style="top: 10%; left: -38.2%;">
+                            <div data-plugin-float-element="" data-plugin-options="{'startPos': 'top', 'speed': 0.1, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}" style="width: 310px; height: 170px; top: 0px; transition: transform 1000ms ease-out 0ms; transform: translate3d(0px, 4.44264%, 0px);">
+                                <svg width="100%" height="100%">
+                                    <defs>
+                                        <pattern id="dots2" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse">
+                                            <circle fill="#CCC" cx="1.5" cy="1.5" r="1.5"></circle>
+                                        </pattern>
+                                    </defs>
+                                    <rect x="0" y="0" width="100%" height="100%" fill="url(#dots2)"></rect>
+                                </svg>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section class="section  bg-transparent m-0 border-0">
         <div class="container">
             <div class="row justify-content-center counters counters-lg pt-2">
                 <div class="col-md-3  appear-animation animated fadeInLeftShorter appear-animation-visible" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="500" style="animation-delay: 500ms;">
                     <div class="counter counter-with-unit counter-unit-on-top">
-                        <strong class="text-color-dark font-weight-extra-bold text-13 text-lg-15" data-to="1459">1459</strong>
+                        <strong class="text-color-dark font-weight-extra-bold text-13 text-lg-15" data-to="7500">7500</strong>
                         <strong class="unit text-color-dark font-weight-bold text-4 text-lg-8">m<sup>2</sup></strong>
                         <label class="font-weight-normal text-3">Alan</label>
                     </div>
@@ -40,12 +91,12 @@
                     <h2 class="font-weight-bold text-color-primary appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">HİZMETLERİMİZ</h2>
                 </div>
                 <div class="overflow-hidden">
-                    <p class="lead mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="400">Köpek dostlarınız için en iyi hizmetleri sunuyoruz</p>
+                    <p class="lead mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="400">İzmir Foça'da köpek dostlarınız için en iyi hizmetleri sunuyoruz</p>
                 </div>
             </div>
         </div>
         <div class="row justify-content-center mt-4">
-            <div class="col-md-3 mb-4">
+            <div class="col-md-4 mb-4">
                 <div class="card custom-card-style appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="400">
                     <div class="card-body text-center p-5">
                         <div class="custom-card-icon">
@@ -57,7 +108,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 mb-4">
+            <div class="col-md-4 mb-4">
                 <div class="card custom-card-style card-green appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">
                     <div class="card-body text-center p-5">
                         <div class="custom-card-icon">
@@ -69,64 +120,21 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 mb-4">
+            <div class="col-md-4 mb-4">
                 <div class="card custom-card-style card-yellow appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800">
                     <div class="card-body text-center p-5">
                         <div class="custom-card-icon">
                             <i class="fas fa-dog"></i>
                         </div>
-                        <h3 class="card-title font-weight-bold mt-4">Özel Bakım</h3>
+                        <h3 class="card-title font-weight-bold mt-4">Kreş</h3>
                         <p class="card-text">Köpeğinizin ihtiyaçlarına özel bakım hizmetleri ile onun sağlığını ve mutluluğunu koruyun.</p>
                         <a href="/bakim" class="btn-link font-weight-bold">DETAYLI BİLGİ <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 mb-4">
-                <div class="card custom-card-style card-blue appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="1000">
-                    <div class="card-body text-center p-5">
-                        <div class="custom-card-icon">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <h3 class="card-title font-weight-bold mt-4">Veteriner</h3>
-                        <p class="card-text">Uzman veteriner ekibimiz ile köpeğinizin sağlığını koruyun ve acil durumlarda yanınızdayız.</p>
-                        <a href="/veteriner" class="btn-link font-weight-bold">DETAYLI BİLGİ <i class="fas fa-arrow-right ml-1"></i></a>
-                    </div>
-                </div>
-            </div>
+           
         </div>
     </div>
-
-
-    <section class="section section-background-half-primary-half-secondary section-no-border my-0">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="row text-center">
-                        @foreach ($ServiceCategory as $row)
-                        <div class="col-md-4">
-                            <div class="card bg-color-light border-0 py-3">
-                                <div class="card-body px-3 py-2">
-                                    <img src="https://picsum.photos/800/500?random=1" class="img-fluid" alt="">
-
-                                    <h4 class="font-weight-semibold text-5 line-height-3 ls-0 mb-1 mt-1">
-                                        <a href="#" class="text-dark text-color-hover-primary text-decoration-none">
-                                            {{ $row->title}}
-                                        </a>
-                                    </h4>
-
-                                    <div class="d-flex justify-content-center align-items-center">
-                                        <strong class="text-color-dark text-2">Detaylı İncele</strong>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
     <section class="parallax section section-text-light section-parallax" data-plugin-parallax data-plugin-options="{'speed': 1.5, 'parallaxHeight': '400%'}" data-image-src="/parallax.jpg">
         <section class="call-to-action">
@@ -355,343 +363,6 @@
 
     </div>
 
-    <style>
-        .custom-card-style {
-            border-radius: 20px;
-            border: none;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            height: 100%;
-            background-color: #FFECD9;
-        }
-        
-        .custom-card-style.card-green {
-            background-color: #E8F5E4;
-        }
-        
-        .custom-card-style.card-yellow {
-            background-color: #FFF8D9;
-        }
-        
-        .custom-card-style.card-blue {
-            background-color: #E4F5F8;
-        }
-        
-        .custom-card-style:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        
-        .custom-card-icon {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background-color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .custom-card-icon i {
-            font-size: 30px;
-            color: #333;
-        }
-        
-        .custom-card-style .card-title {
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
-        
-        .custom-card-style .card-text {
-            color: #555;
-            margin-bottom: 25px;
-        }
-        
-        .custom-card-style .btn-link {
-            color: #333;
-            text-decoration: none;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-        
-        .custom-card-style .btn-link:hover {
-            transform: translateX(5px);
-        }
-
-        .modern-tab-container {
-            margin: 30px 0;
-            position: relative;
-        }
-        
-        .modern-tabs {
-            display: flex;
-            flex-wrap: wrap;
-            border-radius: 8px;
-            background: #f8f9fa;
-            padding: 5px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        
-        .modern-tabs .nav-item {
-            margin: 5px;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-        
-        .modern-tabs .nav-link {
-            border-radius: 6px;
-            padding: 12px 20px;
-            font-weight: 600;
-            color: #555;
-            background: transparent;
-            transition: all 0.3s ease;
-            border: none;
-            position: relative;
-            overflow: hidden;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .modern-tabs .nav-link i {
-            font-size: 16px;
-            margin-right: 8px;
-            transition: all 0.3s ease;
-        }
-        
-        .modern-tabs .nav-link:hover {
-            color: #dd393b;
-            background: rgba(255, 207, 191, 0.1);
-            transform: translateY(-2px);
-        }
-        
-        .modern-tabs .nav-link:hover i {
-            transform: scale(1.2);
-        }
-        
-        .modern-tabs .nav-link.active {
-            color: #fff;
-            background: #dd393b;
-            box-shadow: 0 4px 10px rgba(255, 207, 191, 0.4);
-        }
-        
-        .modern-tabs .nav-link.active i {
-            color: #fff;
-        }
-        
-        @media (max-width: 767px) {
-            .modern-tabs {
-                padding: 3px;
-            }
-            
-            .modern-tabs .nav-item {
-                margin: 3px;
-            }
-            
-            .modern-tabs .nav-link {
-                padding: 8px 12px;
-                font-size: 12px;
-            }
-        }
-
-        /* Masonry düzeni için ek stiller */
-        .portfolio-list {
-            margin-left: -15px;
-            margin-right: -15px;
-        }
-        
-        .isotope-item {
-            padding: 15px;
-            transition: all 0.5s ease;
-        }
-        
-        .portfolio-item {
-            margin-bottom: 0;
-        }
-        
-        /* Müşteri Yorumları Stilleri */
-        .custom-divider.divider-primary hr {
-            background: #dd393b;
-            height: 3px;
-            width: 50px;
-        }
-        
-        .custom-testimonial-style-1 blockquote {
-            position: relative;
-            padding: 10px 20px;
-            border-left: none;
-        }
-        
-        .custom-testimonial-style-1 blockquote:before {
-            content: '\f10d';
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 900;
-            font-size: 20px;
-            color: #dd393b;
-            position: absolute;
-            top: -10px;
-            left: 0;
-            opacity: 0.2;
-        }
-        
-        .custom-border-radius-1 {
-            border-radius: 10px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
-        
-        .custom-border-radius-1:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .testimonial-author strong {
-            color: #dd393b;
-            font-size: 16px;
-        }
-        
-        .owl-carousel .owl-nav button.owl-prev, 
-        .owl-carousel .owl-nav button.owl-next {
-            background-color: #dd393b !important;
-            color: #fff !important;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
-            opacity: 0.7;
-            transition: all 0.3s ease;
-        }
-        
-        .owl-carousel .owl-nav button.owl-prev:hover, 
-        .owl-carousel .owl-nav button.owl-next:hover {
-            opacity: 1;
-            transform: scale(1.1);
-        }
-        
-        /* Testimonials Section with Paw Prints Background */
-        .testimonials-section {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .paw-prints-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            opacity: 0.1;
-            pointer-events: none;
-            background: none;
-        }
-        
-        .paw-prints-bg:before,
-        .paw-prints-bg:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 60px;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 100 100'%3E%3Cpath fill='%23dd393b' d='M30.23,12.32c-1.75-0.47-3.76,0.56-4.49,2.3c-0.73,1.74,0.09,3.53,1.84,4c1.75,0.47,3.76-0.56,4.49-2.3 C32.8,14.58,31.98,12.79,30.23,12.32z M24.4,18.4c-1.75-0.47-3.76,0.56-4.49,2.3c-0.73,1.74,0.09,3.53,1.84,4c1.75,0.47,3.76-0.56,4.49-2.3 C26.97,20.66,26.15,18.87,24.4,18.4z M35.75,18.4c-1.75-0.47-3.76,0.56-4.49,2.3c-0.73,1.74,0.09,3.53,1.84,4c1.75,0.47,3.76-0.56,4.49-2.3 C38.32,20.66,37.5,18.87,35.75,18.4z M29.92,24.48c-1.75-0.47-3.76,0.56-4.49,2.3c-0.73,1.74,0.09,3.53,1.84,4c1.75,0.47,3.76-0.56,4.49-2.3 C32.49,26.74,31.67,24.95,29.92,24.48z M29.92,32.32c-3.14-0.84-6.26,0.41-6.97,2.8c-0.71,2.39,1.27,5.01,4.41,5.85 c3.14,0.84,6.26-0.41,6.97-2.8C35.04,35.78,33.06,33.16,29.92,32.32z'/%3E%3C/svg%3E");
-            background-repeat: repeat-x;
-            background-size: 40px 40px;
-        }
-        
-        .paw-prints-bg:before {
-            top: 20%;
-            animation: pawWalkRight 30s linear infinite;
-        }
-        
-        .paw-prints-bg:after {
-            bottom: 20%;
-            animation: pawWalkLeft 30s linear infinite;
-        }
-        
-        @keyframes pawWalkRight {
-            0% {
-                background-position: -100% 0;
-            }
-            100% {
-                background-position: 100% 0;
-            }
-        }
-        
-        @keyframes pawWalkLeft {
-            0% {
-                background-position: 100% 0;
-            }
-            100% {
-                background-position: -100% 0;
-            }
-        }
-        
-        .testimonials-section .container {
-            position: relative;
-            z-index: 1;
-        }
-        
-        /* Google Review Badge Styles */
-        .google-review-badge {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 5px;
-        }
-        
-        .google-logo {
-            height: 20px;
-            margin-bottom: 5px;
-        }
-        
-        .rating {
-            color: #FBBC05;
-            font-size: 14px;
-            letter-spacing: 2px;
-        }
-        
-        .testimonial-author {
-            margin-top: 15px;
-        }
-        
-        .testimonial-author strong {
-            display: block;
-            margin-bottom: 5px;
-        }
-    </style>
-
-    <script>
-     document.addEventListener('DOMContentLoaded', function() {
-        // Tab menüsü için tıklama olaylarını yönet
-        const tabItems = document.querySelectorAll('.modern-tabs .nav-item');
-        
-        tabItems.forEach(item => {
-            item.addEventListener('click', function(e) {
-                // Tıklama olayını engelle
-                e.preventDefault();
-                
-                // Aktif sınıfı tüm öğelerden kaldır
-                tabItems.forEach(tab => {
-                    tab.classList.remove('active');
-                    const link = tab.querySelector('.nav-link');
-                    if (link) link.classList.remove('active');
-                });
-                
-                // Tıklanan öğeye aktif sınıfı ekle
-                this.classList.add('active');
-                const clickedLink = this.querySelector('.nav-link');
-                if (clickedLink) clickedLink.classList.add('active');
-                
-                // Orijinal filtreleme işlevselliğini koru
-                // Bu kısım, mevcut data-sort-id ve data-option-value değerlerini kullanır
-            });
-        });
-    });
-    </script>
-
     <div class="container">
         <div class="row pb-4">
                                 
@@ -779,7 +450,7 @@
         <div class="row">
             <div class="col-12">
                 <h2 class="text-center mb-4">Instagram'dan Köpek Dostlarımız</h2>
-                <p class="text-center mb-4">Bizi Instagram'da takip edin: <a href="https://www.instagram.com/thewoof" class="text-primary font-weight-bold">@thewoof</a></p>
+                <p class="text-center mb-4">Bizi Instagram'da takip edin: <a href="https://www.instagram.com/{{config('settings.instagram')}}" target="_blank" class="text-primary font-weight-bold">@{{config('settings.instagram')}}</a></p>
             </div>
         </div>
             
@@ -854,7 +525,300 @@
     </div>
 
 @endsection
+@section('customCSS')
+<style>
+    .custom-card-style {
+        border-radius: 20px;
+        border: none;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        height: 100%;
+        background-color: #FFECD9;
+    }
+    
+    .custom-card-style.card-green {
+        background-color: #E8F5E4;
+    }
+    
+    .custom-card-style.card-yellow {
+        background-color: #FFF8D9;
+    }
+    
+    .custom-card-style.card-blue {
+        background-color: #E4F5F8;
+    }
+    
+    .custom-card-style:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .custom-card-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    .custom-card-icon i {
+        font-size: 30px;
+        color: #333;
+    }
+    
+    .custom-card-style .card-title {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    
+    .custom-card-style .card-text {
+        color: #555;
+        margin-bottom: 25px;
+    }
+    
+    .custom-card-style .btn-link {
+        color: #333;
+        text-decoration: none;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        display: inline-block;
+    }
+    
+    .custom-card-style .btn-link:hover {
+        transform: translateX(5px);
+    }
 
+    .modern-tab-container {
+        margin: 30px 0;
+        position: relative;
+    }
+    
+    .modern-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 8px;
+        background: #f8f9fa;
+        padding: 5px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    .modern-tabs .nav-item {
+        margin: 5px;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+    
+    .modern-tabs .nav-link {
+        border-radius: 6px;
+        padding: 12px 20px;
+        font-weight: 600;
+        color: #555;
+        background: transparent;
+        transition: all 0.3s ease;
+        border: none;
+        position: relative;
+        overflow: hidden;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .modern-tabs .nav-link i {
+        font-size: 16px;
+        margin-right: 8px;
+        transition: all 0.3s ease;
+    }
+    
+    .modern-tabs .nav-link:hover {
+        color: #dd393b;
+        background: rgba(255, 207, 191, 0.1);
+        transform: translateY(-2px);
+    }
+    
+    .modern-tabs .nav-link:hover i {
+        transform: scale(1.2);
+    }
+    
+    .modern-tabs .nav-link.active {
+        color: #fff;
+        background: #dd393b;
+        box-shadow: 0 4px 10px rgba(255, 207, 191, 0.4);
+    }
+    
+    .modern-tabs .nav-link.active i {
+        color: #fff;
+    }
+    
+    @media (max-width: 767px) {
+        .modern-tabs {
+            padding: 3px;
+        }
+        
+        .modern-tabs .nav-item {
+            margin: 3px;
+        }
+        
+        .modern-tabs .nav-link {
+            padding: 8px 12px;
+            font-size: 12px;
+        }
+    }
 
+    /* Masonry düzeni için ek stiller */
+    .portfolio-list {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    
+    .isotope-item {
+        padding: 15px;
+        transition: all 0.5s ease;
+    }
+    
+    .portfolio-item {
+        margin-bottom: 0;
+    }
+    
+    /* Müşteri Yorumları Stilleri */
+    .custom-divider.divider-primary hr {
+        background: #dd393b;
+        height: 3px;
+        width: 50px;
+    }
+    
+    .custom-testimonial-style-1 blockquote {
+        position: relative;
+        padding: 10px 20px;
+        border-left: none;
+    }
+    
+    .custom-testimonial-style-1 blockquote:before {
+        content: '\f10d';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        font-size: 20px;
+        color: #dd393b;
+        position: absolute;
+        top: -10px;
+        left: 0;
+        opacity: 0.2;
+    }
+    
+    .custom-border-radius-1 {
+        border-radius: 10px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+    }
+    
+    .custom-border-radius-1:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .testimonial-author strong {
+        color: #dd393b;
+        font-size: 16px;
+    }
+    
+    .owl-carousel .owl-nav button.owl-prev, 
+    .owl-carousel .owl-nav button.owl-next {
+        background-color: #dd393b !important;
+        color: #fff !important;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        opacity: 0.7;
+        transition: all 0.3s ease;
+    }
+    
+    .owl-carousel .owl-nav button.owl-prev:hover, 
+    .owl-carousel .owl-nav button.owl-next:hover {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    
+    /* Testimonials Section with Paw Prints Background */
+    .testimonials-section {
+        position: relative;
+        overflow: hidden;
+    }
+ 
+    @keyframes pawWalkRight {
+        0% {
+            background-position: -100% 0;
+        }
+        100% {
+            background-position: 100% 0;
+        }
+    }
+    
+    @keyframes pawWalkLeft {
+        0% {
+            background-position: 100% 0;
+        }
+        100% {
+            background-position: -100% 0;
+        }
+    }
+    
+    .testimonials-section .container {
+        position: relative;
+        z-index: 1;
+    }
+    
+   
+    .rating {
+        color: #FBBC05;
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+    
+    .testimonial-author {
+        margin-top: 15px;
+    }
+    
+    .testimonial-author strong {
+        display: block;
+        margin-bottom: 5px;
+    }
+</style>
+@endsection
+@section('customJS')
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+       // Tab menüsü için tıklama olaylarını yönet
+       const tabItems = document.querySelectorAll('.modern-tabs .nav-item');
+       
+       tabItems.forEach(item => {
+           item.addEventListener('click', function(e) {
+               // Tıklama olayını engelle
+               e.preventDefault();
+               
+               // Aktif sınıfı tüm öğelerden kaldır
+               tabItems.forEach(tab => {
+                   tab.classList.remove('active');
+                   const link = tab.querySelector('.nav-link');
+                   if (link) link.classList.remove('active');
+               });
+               
+               // Tıklanan öğeye aktif sınıfı ekle
+               this.classList.add('active');
+               const clickedLink = this.querySelector('.nav-link');
+               if (clickedLink) clickedLink.classList.add('active');
+               
+               // Orijinal filtreleme işlevselliğini koru
+               // Bu kısım, mevcut data-sort-id ve data-option-value değerlerini kullanır
+           });
+       });
+   });
+   </script>
+@endsection
 
 
