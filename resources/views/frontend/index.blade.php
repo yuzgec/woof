@@ -286,7 +286,7 @@
             </div>
         </div>
     </section>
-    
+{{--     
     <div class="container py-2">
 
         <div class="modern-tab-container">
@@ -361,7 +361,7 @@
             </div>
         </div>
 
-    </div>
+    </div> --}}
 
     <div class="container">
         <div class="row pb-4">
@@ -445,7 +445,7 @@
             </div>
         </div>
     </div>
-
+{{-- 
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -522,7 +522,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
 @endsection
 @section('customCSS')

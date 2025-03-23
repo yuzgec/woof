@@ -103,13 +103,11 @@
             <div class="appear-animation animated fadeIn appear-animation-visible" data-appear-animation="fadeIn" data-appear-animation-delay="800" style="animation-delay: 800ms;">
                 <h4 class="mt-2 mb-1">Adresimiz</strong></h4>
                 <ul class="list list-icons list-icons-style-2 mt-2">
-                    <li><i class="fas fa-map-marker-alt top-6"></i> <strong class="text-dark">Adres:</strong> İzmir, Türkiye</li>
-                    <li><i class="fas fa-phone top-6"></i> <strong class="text-dark">Telefon:</strong> (123) 456-789</li>
-                    <li><i class="fas fa-envelope top-6"></i> <strong class="text-dark">Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></li>
+                    <li><i class="fas fa-map-marker-alt top-6"></i> <strong class="text-dark">Adres:</strong> {{ config('settings.adres1')}}</li>
+                    <li><i class="fas fa-phone top-6"></i> <strong class="text-dark">Telefon:</strong> {{ config('settings.telefon1')}}</li>
+                    <li><i class="fas fa-envelope top-6"></i> <strong class="text-dark">Email:</strong> <a href="mailto:{{ config('settings.email1')}}">{{ config('settings.email1')}}</a></li>
                 </ul>
             </div>
-
-          
 
             <h4 class="pt-5">İletişime <strong>Geçin</strong></h4>
             <p class="lead mb-0 text-4">İlgili alanları doldurunuz. Sorularınızı bizimle paylaşınız!</p>
