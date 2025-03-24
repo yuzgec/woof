@@ -11,7 +11,7 @@
                 <div class="d-flex flex-column align-items-center justify-content-center h-100">
                     <img
                     src="/thewoof.png"
-                    class="w-auto appear-animation"
+                    class="slider-image w-auto appear-animation"
                     data-appear-animation="fadeInRightShorter"
                     data-appear-animation-delay="250"
                     data-plugin-options="{'minWindowWidth': 0}"
@@ -34,3 +34,4 @@
         <path fill="#ffffff" d="M0,0 C240,95 480,100 720,85 C960,70 1200,35 1440,40 L1440,100 L0,100 Z"></path>
     </svg>
 </div>
+

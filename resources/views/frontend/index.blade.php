@@ -787,6 +787,13 @@
         display: block;
         margin-bottom: 5px;
     }
+
+    @media (max-width: 767px) {
+        .slider-image {
+        width: 60% !important;
+        }
+    }
+
 </style>
 @endsection
 @section('customJS')
