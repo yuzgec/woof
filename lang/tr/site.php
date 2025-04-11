@@ -66,6 +66,7 @@ return [
     'tüm_hakları_saklıdır' => 'Tüm Hakları Saklıdır',
     'sitemap' => 'Sitemap',
     'web_tasarim' => 'Web Tasarım',
+    'sosyal_sorumluluk' => 'Sosyal Sorumluluk',
 
 
 ];

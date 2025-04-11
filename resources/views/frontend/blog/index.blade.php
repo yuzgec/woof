@@ -331,7 +331,7 @@
     </div>
 </div> --}}
 
-<section class="section bg-color-primary border-0 m-0">
+{{-- <section class="section bg-color-primary border-0 m-0">
     <div class="container container-xl-custom">
         <div class="row">
             <div class="col text-center">								
@@ -373,7 +373,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 {{-- 
 <div class="container container-xl-custom">
 

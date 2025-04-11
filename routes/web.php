@@ -22,12 +22,17 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),'middleware' => [ 'lo
     Route::get(__('menu.hizmetlerimiz'), [HomeController::class, 'service'])->name('service');
     Route::get(__('menu.hizmet').'/{url}', [HomeController::class, 'servicedetail'])->name('servicedetail');
 
+    Route::get('/kategori/{url}', [HomeController::class, 'servicecategory'])->name('servicecategory');
+
     Route::get(__('menu.proje').'/{url}', [HomeController::class, 'projectdetail'])->name('projectdetail');
     Route::get(__('menu.projeler'), [HomeController::class, 'project'])->name('project');
     Route::get(__('menu.blog').'/{url}', [HomeController::class, 'blogdetail'])->name('blogdetail');
 
     Route::get('video', [HomeController::class, 'video'])->name('video');
     Route::get('foto', [HomeController::class, 'foto'])->name('foto');
+
+
+    Route::get('bilgilendirme', [HomeController::class, 'information'])->name('information');
 
 });
 

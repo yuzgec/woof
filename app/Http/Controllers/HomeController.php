@@ -30,6 +30,7 @@ class HomeController extends Controller
         
         $Hakkimizda = Page::where('id', '=',1)->first();
         $Services = Service::where('status', 1)->take(5)->orderBy('rank')->get();
+        $ServiceCategories = ServiceCategory::take(3)->orderBy('id')->get();
 
         // Her servis için resim sayılarını hesapla
         $imageCounts = [];
@@ -69,22 +70,22 @@ class HomeController extends Controller
                 return $media->getCustomProperty('orientation') === 'horizontal' ? 1 : 0;
             });
 
-        return view('frontend.index', compact('Hakkimizda', 'galleryImages', 'Services', 'imageCounts', 'defaultService', 'Slider', 'Index'));
+        return view('frontend.index', compact('Hakkimizda', 'galleryImages', 'Services', 'imageCounts', 'defaultService', 'Slider', 'Index', 'ServiceCategories'));
     }
 
-    public function categorydetail($url)
+    public function servicecategory($url)
     {
-        $Detay = ServiceCategory::whereHas('translations', function ($query) use ($url) {
+        $Detail = ServiceCategory::whereHas('translations', function ($query) use ($url) {
             $query->where('slug', $url);
         })->first();
 
-        views($Detay)->cooldown(60)->record();
+        views($Detail)->cooldown(60)->record();
 
-        $Product = Service::where('category',$Detay->id)->get();
+        $Service = Service::where('category',$Detail->id)->get();
 
-        SEOMeta::setTitle($Detay->title);
+        SEOMeta::setTitle($Detail->title);
         SEOMeta::setCanonical(url()->full());
-        return view('frontend.service.category', compact('Detay', 'Product'));
+        return view('frontend.service.category', compact('Detail', 'Service'));
     }
 
     public function corporatedetail($url)
@@ -263,6 +264,10 @@ class HomeController extends Controller
             'html' => view('frontend.partials.gallery-items', compact('images'))->render(),
             'count' => $count
         ]);
+    }
+
+    public function information(){
+        return view('frontend.corporate.information');
     }
 
 }

@@ -12,11 +12,12 @@
         style="background-image: url('/parallax.jpg	'); background-size: cover; position: absolute; top: 0px; left: 0px; width: 100%; height: 180%; transform: translate3d(0px, -50.3125px, 0px); background-position-x: 50%;"></div>    <div class="container">
         <div class="row pt-4">
             <div class="col-md-12 align-self-center p-static order-2 text-center">
-                <h1 class="text-white text-uppercase mt-1">{{$Detail->title}} </strong></h1>
+                <h1 class="text-white text-uppercase mt-1 text-10 font-weight-bold">{{$Detail->title}} </strong></h1>
+                <p class="text-white">{{config('settings.siteName')}}</p>
             </div>
             <div class="col-md-12 align-self-center order-1">
                 <ul class="breadcrumb breadcrumb-light d-block text-center">
-                    <li><a href="{{ route('home')}}">Anasayfa</a></li>
+                    <li><a href="{{ route('home')}}"><i class="fas fa-home text-1"></i> Anasayfa</a></li>
                     <li><a href="" title="{{ $Detail->getCategory->title}}">{{ $Detail->getCategory->title}}</a></li>
                     <li class="active">{{ $Detail->title}}</li>
                 </ul>

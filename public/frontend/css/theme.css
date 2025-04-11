@@ -1147,7 +1147,7 @@ li {
 }
 
 #header .header-btn-collapse-nav {
-	background: #CCC;
+	background:red;
 	color: #FFF;
 	display: none;
 	float: right;

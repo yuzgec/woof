@@ -15,12 +15,21 @@
                         </div>
                     </div>
                     <div class="header-column justify-content-end align-items-center flex-row">
-                        <ul class="header-social-icons social-icons social-icons-clean social-icons-icon-dark social-icons-medium me-2 mb-0 d-none d-sm-block">
+                        <ul class="list list-unstyled list-inline mb-0">
+                            <li class="list-inline-item text-white me-md-4 mb-0 text-2">
+                                <a href="{{ route('information')}}" class="ms-2 text-3 text-decoration-none text-white">
+                                <i class="fas fa-circle-info text-white text-4 position-relative top-2 me-1"></i>
+                               Bilgilendirme</a>
+                            </li>
+                            
+                        </ul>
+
+                        <ul class="header-social-icons social-icons social-icons-clean social-icons-icon-dark social-icons-medium me-2 mb-0">
                             <li class="social-icons-instagram">
-                                <img src="/frontend/flag/tr.svg" alt="flag" width="20">
+                                <img src="/frontend/flag/tr.svg" alt="Türkçe - {{ config('settings.siteName')}}" width="20">
                             </li>
                             <li class="social-icons-instagram">
-                                <img src="/frontend/flag/en.svg" alt="flag" width="20">
+                                <img src="/frontend/flag/en.svg" alt="İngilizce - {{ config('settings.siteName')}}" width="20">
                             </li>
                         </ul>
                     </div>
@@ -45,12 +54,12 @@
                                 <nav class="collapse">
                                     <ul class="nav nav-pills" id="mainNav">
                                         <li>
-                                            <a class="nav-link active" href="{{ route('home')}}">
+                                            <a class="nav-link active" href="{{ route('home')}}" title="{{ __('site.anasayfa')}}">
                                                 {{ __('site.anasayfa')}}
                                             </a>
                                         </li>
                                         <li class="dropdown dropdown-primary">
-                                            <a class="dropdown-toggle nav-link" href="#">
+                                            <a class="dropdown-toggle nav-link" href="#" title="{{ __('site.kurumsal')}}">
                                                 {{ __('site.kurumsal')}}
                                             </a>
                                             <ul class="dropdown-menu">
@@ -65,7 +74,7 @@
                                         </li>
                                         @foreach ($ServiceCategory as $item)
                                         <li class="dropdown dropdown-primary">
-                                            <a class="dropdown-toggle nav-link" href="{{ route('home')}}">
+                                            <a class="dropdown-toggle nav-link" href="{{ route('home')}}" title="{{ $item->title}}">
                                                 {{ $item->title}}
                                             </a>
                                             <ul class="dropdown-menu">
@@ -82,19 +91,19 @@
                                         @endforeach
 
                                         <li>
-                                            <a class="nav-link" href="{{ route('blog')}}">
+                                            <a class="nav-link" href="{{ route('blog')}}" title="{{ __('site.blog')}}">
                                                 {{ __('site.blog')}}
                                             </a>
                                         </li>
 
                                         <li>
-                                            <a class="nav-link" href="{{ route('social')}}">
-                                                Sosyal Sorumluluk
+                                            <a class="nav-link" href="{{ route('social')}}" title="{{ __('site.sosyal_sorumluluk')}}">
+                                                {{ __('site.sosyal_sorumluluk')}}
                                             </a>
                                         </li>
                                         
                                         <li>
-                                            <a class="nav-link" href="{{ route('contactus')}}">
+                                            <a class="nav-link" href="{{ route('contactus')}}" title="{{ __('site.iletisim')}}">
                                                 {{ __('site.iletisim')}}
                                             </a>
                                         </li>

@@ -31,9 +31,10 @@
             <div class="col-md-3 mb-4 mb-md-0">
                 <h4 class="text-white font-weight-bold mb-3">Hızlı Linkler</h4>
                 <ul class="list-unstyled">
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Köpek Oteli Hizmetleri</a></li>
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Köpek Eğitimi Hizmetleri</a></li>
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Bakım ve Tımar Hizmetleri</a></li>
+                    @foreach($ServiceCategory as $category)
+                    <li class="mb-2"><a href="{{ route('servicecategory', $category->slug) }}" class="text-white text-decoration-none">{{ $category->title }}</a></li>
+                    @endforeach
+                  
                 </ul>
             </div>
             <div class="col-md-3">

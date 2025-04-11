@@ -8,6 +8,8 @@
         <div class="row align-items-center py-1">
             <div class="col-md-6 mb-4">
                 <div class="pe-3 pe-md-5 pb-3 pb-sm-0 py-lg-5 my-lg-4 border-right-light border-sm-none">
+                    <h2 class="font-weight-bold text-color-primary appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">İZMİR KÖPEK OTELİ</h2>
+                   <h4 class="text-color-primary">{{ config('settings.siteName')}}</h4>
                     {!! $Hakkimizda->desc !!}
                 </div>
             </div>
@@ -16,12 +18,12 @@
                     <div class="cascading-images transform-none position-relative clearfix">
                         <div class="position-absolute z-index-3" style="top: -5%;left:-5%">
                             <div data-plugin-float-element="" data-plugin-options="{'startPos': 'bottom', 'speed': 0.1, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}" style="bottom: 0px; transition: transform 1000ms ease-out 0ms; transform: translate3d(0px, -5.24825%, 0px);">
-                                <img src="/{{config('settings.siteLogo')}}" style="max-width: 200px; animation-duration: 600ms; animation-delay: 300ms;" class="bg-white appear-animation border-radius-2 box-shadow-3 animated expandIn appear-animation-visible" width="500" alt="{{ config('settings.siteName') }}" data-appear-animation="expandIn" data-appear-animation-delay="300" data-appear-animation-duration="600ms">
+                                <img src="/{{config('settings.siteLogo')}}" style="max-width: 150px; animation-duration: 600ms; animation-delay: 300ms;" class="bg-white appear-animation border-radius-2 box-shadow-3 animated expandIn appear-animation-visible" width="500" alt="{{ config('settings.siteName') }}" data-appear-animation="expandIn" data-appear-animation-delay="300" data-appear-animation-duration="600ms">
                             </div>
                         </div>
 
                         <div class="position-relative z-index-2">
-                            <img src="https://picsum.photos/800/800?random=1" class="p-1 appear-animation border-radius-2 box-shadow-3 animated expandIn appear-animation-visible" width="500" alt="{{ config('settings.siteName') }}" data-appear-animation="expandIn" data-appear-animation-duration="600ms" style="animation-duration: 600ms; animation-delay: 100ms;">
+                            <img src="/hakkimizda.jpg" class="p-1 appear-animation border-radius-2 box-shadow-3 animated expandIn appear-animation-visible" width="500" alt="{{ config('settings.siteName') }}" data-appear-animation="expandIn" data-appear-animation-duration="600ms" style="animation-duration: 600ms; animation-delay: 100ms;">
                         </div>
 
                         <div class="patterns opacity-7 position-absolute z-index-1 d-none d-md-block" style="bottom: -8%; right: 9%;">
@@ -61,22 +63,22 @@
             <div class="row justify-content-center counters counters-lg pt-2">
                 <div class="col-md-3  appear-animation animated fadeInLeftShorter appear-animation-visible" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="500" style="animation-delay: 500ms;">
                     <div class="counter counter-with-unit counter-unit-on-top">
-                        <strong class="text-color-dark font-weight-extra-bold text-13 text-lg-15" data-to="7500">7500</strong>
-                        <strong class="unit text-color-dark font-weight-bold text-4 text-lg-8">m<sup>2</sup></strong>
+                        <strong class="text-color-dark font-weight-extra-bold text-12" data-to="7500">7500</strong>
+                        <strong class="unit text-color-dark font-weight-bold text-3">m<sup>2</sup></strong>
                         <label class="font-weight-normal text-3">Alan</label>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-3 appear-animation animated fadeIn appear-animation-visible" data-appear-animation="fadeIn" data-appear-animation-delay="300" style="animation-delay: 300ms;">
                     <div class="counter counter-with-unit counter-unit-on-top">
-                        <strong class="text-color-dark font-weight-extra-bold text-13 text-lg-15" data-to="150">150</strong>
-                        <strong class="unit text-color-dark font-weight-bold text-4 text-lg-8">+</strong>
+                        <strong class="text-color-dark font-weight-extra-bold text-12" data-to="150">150</strong>
+                        <strong class="unit text-color-dark font-weight-bold text-3">+</strong>
                         <label class="font-weight-normal text-3">Kapasite</label>
                     </div>
                 </div>
                 <div class="col-md-3 appear-animation animated fadeInRightShorter appear-animation-visible" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="500" style="animation-delay: 500ms;">
                     <div class="counter counter-with-unit counter-unit-on-top">
-                        <strong class="text-color-dark font-weight-extra-bold text-13 text-lg-15" data-to="99">99</strong>
-                        <strong class="unit text-color-dark font-weight-bold text-4 text-lg-8">+</strong>
+                        <strong class="text-color-dark font-weight-extra-bold text-12" data-to="99">99</strong>
+                        <strong class="unit text-color-dark font-weight-bold text-3">+</strong>
                         <label class="font-weight-normal text-3">Köpek Sayısı</label>
                     </div>
                 </div>
@@ -95,44 +97,24 @@
                 </div>
             </div>
         </div>
+        
         <div class="row justify-content-center mt-4">
+            @foreach($ServiceCategories as $key => $category)
             <div class="col-md-4 mb-4">
-                <div class="card custom-card-style appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="400">
+                <div class="card custom-card-style @if($key == 1) card-green @elseif($key == 2) card-yellow @endif appear-animation" 
+                     data-appear-animation="@if($key == 0) fadeInLeftShorter @else fadeInUpShorter @endif" 
+                     data-appear-animation-delay="{{ 400 + ($key * 200) }}">
                     <div class="card-body text-center p-5">
                         <div class="custom-card-icon">
-                            <i class="fas fa-home"></i>
+                            <i class="fas @if($key == 0) fa-home @elseif($key == 1) fa-paw @else fa-dog @endif"></i>
                         </div>
-                        <h3 class="card-title font-weight-bold mt-4">Köpek Oteli</h3>
-                        <p class="card-text">Siz tatildeyken köpek dostlarınız için güvenli ve konforlu bir konaklama deneyimi sunuyoruz.</p>
-                        <a href="/konaklama" class="btn-link font-weight-bold">DETAYLI BİLGİ <i class="fas fa-arrow-right ml-1"></i></a>
+                        <h3 class="card-title font-weight-bold mt-4">{{ $category->title }}</h3>
+                        <p class="card-text">{{ $category->short }}</p>
+                        <a href="{{ route('servicecategory', $category->slug) }}" class="btn-link font-weight-bold">DETAYLI BİLGİ <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card custom-card-style card-green appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">
-                    <div class="card-body text-center p-5">
-                        <div class="custom-card-icon">
-                            <i class="fas fa-paw"></i>
-                        </div>
-                        <h3 class="card-title font-weight-bold mt-4">Eğitim</h3>
-                        <p class="card-text">Profesyonel eğitmenlerimiz ile köpeğinizin davranışlarını iyileştirin ve daha mutlu bir yaşam sürün.</p>
-                        <a href="/egitim" class="btn-link font-weight-bold">DETAYLI BİLGİ <i class="fas fa-arrow-right ml-1"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card custom-card-style card-yellow appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800">
-                    <div class="card-body text-center p-5">
-                        <div class="custom-card-icon">
-                            <i class="fas fa-dog"></i>
-                        </div>
-                        <h3 class="card-title font-weight-bold mt-4">Kreş</h3>
-                        <p class="card-text">Köpeğinizin ihtiyaçlarına özel bakım hizmetleri ile onun sağlığını ve mutluluğunu koruyun.</p>
-                        <a href="/bakim" class="btn-link font-weight-bold">DETAYLI BİLGİ <i class="fas fa-arrow-right ml-1"></i></a>
-                    </div>
-                </div>
-            </div>
-           
+            @endforeach
         </div>
     </div>
 
@@ -361,7 +343,7 @@
             </div>
         </div>
 
-    </div> --}}
+</div> --}}
 
     <div class="container">
         <div class="row pb-4">
